@@ -1,0 +1,21 @@
+# <h1>UI</h1>
+# <% @uis.each do |t| %>
+#     <p>内容:<%= t.caption %></p>
+# <% end %>
+
+# <%= form_tag({controller:"notes",action:"ui"}, method: :get) do %>
+#     <%= search_form_for @u, url: note_ui_path do |f| %>
+#         <%= f.collection_select :ui_id_eq, UI.where.not(id: 0), :id, :name, include_blank: "詳細カテゴリ" %>
+#         <%= f.submit '検索' %>
+#     <% end %>
+# <% end %>
+
+# <h2>UI <%= @ui.name %></h2>
+#     <ul>
+#         <% @notes.each do |note| %>
+#             <li>
+#                 <%= image_tag note.image if note.image.attached? %>
+#             </li>
+#         <% end %>
+#     </ul>
+# </div>

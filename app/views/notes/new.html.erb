@@ -1,0 +1,18 @@
+<h1>Mydea</h1>
+<h3>NewIdea</h3>
+<%= form_for @note do |f| %>
+
+    <div class="field">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+    </div>
+
+    <div class= "field">
+        <%= f.label :caption,"キャプション" %>
+        <%= f.text_field :caption, :size => 30 %>
+    </div>
+
+    <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "みんなのアイデアに戻る", notes_path %>

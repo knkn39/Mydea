@@ -1,0 +1,25 @@
+<h1>Mydea</h1>
+<h3>みんなのアイデア</h3>
+
+<%= link_to "新規投稿へ", new_note_path %>
+
+<% if user_signed_in? %>
+  <%= link_to "マイページへ", user_path(current_user.id) %>
+<% end %>
+
+<div class="note-container">
+  <% @notes.each do |t| %>
+    <div class="note">
+      <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      <%= t.caption %>
+        # <% if t.category = "graphic" %>
+        #   <%= link_to t.category, notes_graphic_path %>
+        # <% elsif t.category = "typography" %>
+        #   <%= link_to t.category, notes_typography_path %>
+        # <% else %>
+        #   <%= link_to t.category, notes_ui_path %>
+        # <% end %>
+    </div>
+  <% end %>
+</div
+

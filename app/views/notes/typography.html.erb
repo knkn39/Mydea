@@ -1,0 +1,21 @@
+# <h1>タイポグラフィ</h1>
+# <% @typographies.each do |t| %>
+#     <p>内容:<%= t.caption %></p>
+# <% end %>
+
+# <%= form_tag({controller:"notes",action:"typography"}, method: :get) do %>
+#     <%= search_form_for @t, url: note_typography_path do |f| %>
+#         <%= f.collection_select :typography_id_eq, Typography.where.not(id: 0), :id, :name, include_blank: "詳細カテゴリ" %>
+#         <%= f.submit '検索' %>
+#     <% end %>
+# <% end %>
+
+# <h2>タイポグラフィ <%= @typography.name %></h2>
+#     <ul>
+#         <% @notes.each do |note| %>
+#             <li>
+#                 <%= image_tag note.image if note.image.attached? %>
+#             </li>
+#         <% end %>
+#     </ul>
+# </div>
