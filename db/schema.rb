@@ -11,13 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_04_11_055122) do
-  create_table "graphics", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "graphic_id"
-    t.string "name"
-  end
-
   create_table "likes", force: :cascade do |t|
     t.integer "note_id", null: false
     t.integer "user_id", null: false
@@ -60,20 +53,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_11_055122) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "typographies", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-    t.integer "typography_id"
-  end
-
-  create_table "uis", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-    t.integer "ui_id"
   end
 
   create_table "users", force: :cascade do |t|

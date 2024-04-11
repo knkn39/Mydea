@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+
 ruby "3.0.4"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -62,8 +63,9 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
+  gem 'capybara', '>= 3.26'
   gem "selenium-webdriver"
+  gem 'webdrivers'
 end
 
 group :production do
@@ -78,7 +80,3 @@ gem 'hirb-unicode'
 gem 'carrierwave' , '~> 1.3' ,  '>= 1.3.1'
 gem 'cloudinary'
 gem 'dotenv-rails'
-
-# gem 'active_hash'
-# gem 'ransack'
-

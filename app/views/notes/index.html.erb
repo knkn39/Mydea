@@ -12,13 +12,6 @@
     <div class="note">
       <%= image_tag t.image_url, size: "250x200" if t.image? %>
       <%= t.caption %>
-        # <% if t.category = "graphic" %>
-        #   <%= link_to t.category, notes_graphic_path %>
-        # <% elsif t.category = "typography" %>
-        #   <%= link_to t.category, notes_typography_path %>
-        # <% else %>
-        #   <%= link_to t.category, notes_ui_path %>
-        # <% end %>
     </div>
   <% end %>
 </div
